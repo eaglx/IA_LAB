@@ -1,4 +1,4 @@
-﻿li { list-style-type: square }
+li { list-style-type: square }
 span#cena {
 	color: red;
 	font-weight: bold;
@@ -37,3 +37,23 @@ body {
 
 h1 { color: blue }
 h1 { color: green }
+
+* {
+	font-family: Tahoma;
+}
+
+body {
+	margin: 5em 10em 5em 10em;
+}
+
+p {
+	text-align: justify;
+}
+
+#wydawnictwo {
+	text-decoration: underline;
+}
+
+span#lista {
+	font-weight: bold;
+}
