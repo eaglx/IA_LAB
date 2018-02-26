@@ -1,11 +1,11 @@
 ﻿li { list-style-type: square }
-span#cena { 
-	color: red; 
-	font-weight: bold 
+span#cena {
+	color: red;
+	font-weight: bold;
 }
 
 p.wstep {
-	 font-style: italic
+	 font-style: italic;
 }
 
 td img{
@@ -14,6 +14,7 @@ td img{
 }
 
 td img:hover {
+	border-style: solid;
     border-color: red;
 }
 
@@ -21,6 +22,18 @@ h1 + h2 {
 	letter-spacing: 5px;
 }
 
-.colspan-2 {
+td[colspan=2] > p {
 	font-size: small;
 }
+
+p + p {
+	color: gray;
+}
+
+body {
+	background-image:  url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/TSI_Puncak.jpg/800px-TSI_Puncak.jpg);
+	background-repeat: repeat-y;
+}
+
+h1 { color: blue }
+h1 { color: green }
