@@ -31,7 +31,8 @@ p + p {
 }
 
 body {
-	background-image:  url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/TSI_Puncak.jpg/800px-TSI_Puncak.jpg);
+	background-image:  url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkcKw1ASd-a3f8RPZ0MODmztXFiAvoNkHzHOOvC-zEqWXJCAC2);
+	opacity: 1.0;
 	background-repeat: repeat-y;
 }
 
