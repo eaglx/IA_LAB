@@ -1,5 +1,5 @@
 li { list-style-type: square }
-span#cena {
+#cena {
 	color: red;
 	font-weight: bold;
 }
@@ -55,6 +55,6 @@ p {
 	text-decoration: underline;
 }
 
-span#lista {
+.lista {
 	font-weight: bold;
 }
