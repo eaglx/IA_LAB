@@ -1,5 +1,6 @@
 @import "_defailt.css";
 
+$font_size: 16px;
 $grid-columns: 12;
 $grid-max-width: 2048px;
 
@@ -14,7 +15,7 @@ html {
 }
 
 body{
-       font-size: 16px;
+       font-size: $font_size;
        margin: 20px;
 
     header {
