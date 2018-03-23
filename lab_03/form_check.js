@@ -19,9 +19,9 @@ function hideElement(e) {
 
 function isEmpty(arg){
     if(arg.length)
-        return false
+        return false;
     else
-        return true
+        return true;
 }
 
 function isWhiteSpace(str) {
@@ -65,6 +65,17 @@ function checkEmail(obj) {
     }
 }
 
+function checkEmailRegEx(obj) {
+    var str = obj.value;
+    var email = /[a-zA-Z_0-9\.]+@[a-zA-Z_0-9\.]+\.[a-zA-Z][a-zA-Z]+/;
+    if (email.test(str))
+        return true;
+    else {
+        alert("Podaj właściwy e-mail");
+        return false;
+    }
+}
+
 function checkStringAndFocus(obj, msg) {
     var str = obj.value;
     var errorFieldName = "e_" + obj.name.substr(2, obj.name.length);
@@ -85,7 +96,7 @@ function validate(form){
         || (!checkStringAndFocus(form.elements["f_kod"], "Podaj kod"))
         || (!checkStringAndFocus(form.elements["f_ulica"], "Podaj ulice"))
         || (!checkStringAndFocus(form.elements["f_miasto"], "Podaj miasto"))
-        || (!checkEmail(form.elements["f_email"]))){
+        || (!checkEmailRegEx(form.elements["f_email"]))){
         return false;
     }
 
