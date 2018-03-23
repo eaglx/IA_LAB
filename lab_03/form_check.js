@@ -1,3 +1,10 @@
+function cnt(form, msg, maxSize) {
+    if (form.value.length > maxSize)
+        form.value = form.value.substring(0, maxSize);
+    else
+        msg.innerHTML = maxSize - form.value.length;
+}
+
 function nextNode(e) {
     while (e && e.nodeType != 1) {
         e = e.nextSibling;
