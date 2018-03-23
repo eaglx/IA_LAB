@@ -72,12 +72,12 @@ function checkStringAndFocus(obj, msg) {
 }
 
 function validate(form){
-    if((!checkStringAndFocus(form.elements["f_imie"], "Podaj imie"))){
-        //|| (!checkStringAndFocus(form.elements["f_nazwisko"], "Podaj nazwisko"))
-        //|| (!checkStringAndFocus(form.elements["f_kod"], "Podaj kod"))
-        //|| (!checkStringAndFocus(form.elements["f_ulica"], "Podaj ulice"))
-        //|| (!checkStringAndFocus(form.elements["f_miasto"], "Podaj miasto"))
-        //|| (!checkEmail(form.elements["f_email"]))){
+    if((!checkStringAndFocus(form.elements["f_imie"], "Podaj imie"))
+        || (!checkStringAndFocus(form.elements["f_nazwisko"], "Podaj nazwisko"))
+        || (!checkStringAndFocus(form.elements["f_kod"], "Podaj kod"))
+        || (!checkStringAndFocus(form.elements["f_ulica"], "Podaj ulice"))
+        || (!checkStringAndFocus(form.elements["f_miasto"], "Podaj miasto"))
+        || (!checkEmail(form.elements["f_email"]))){
         return false;
     }
 
