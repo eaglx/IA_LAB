@@ -46,20 +46,25 @@ function checkEmail(obj) {
     }
 }
 
-function checkString(toCheck, message) {
-    if(isEmpty(toCheck.value) || isWhiteSpace(toCheck.value)){
-        alert(message)
-        return false
-    }
-    return true
+function checkStringAndFocus(obj, msg) {
+    var str = obj.value;
+    var errorFieldName = "e_" + obj.name.substr(2, obj.name.length);
+    if (isWhiteSpace(str) || isEmpty(str)) {
+         document.getElementById(errorFieldName).innerHTML = msg;
+         obj.focus();
+         return false;
+     }
+     else {
+         return true;
+     }
 }
 
 function validate(form){
-    if((!checkString(form.elements["f_imie"], "Podaj imie"))
-        || (!checkString(form.elements["f_nazwisko"], "Podaj nazwisko"))
-        || (!checkString(form.elements["f_kod"], "Podaj kod"))
-        || (!checkString(form.elements["f_ulica"], "Podaj ulice"))
-        || (!checkString(form.elements["f_miasto"], "Podaj miasto"))
+    if((!checkStringAndFocus(form.elements["f_imie"], "Podaj imie"))
+        || (!checkStringAndFocus(form.elements["f_nazwisko"], "Podaj nazwisko"))
+        || (!checkStringAndFocus(form.elements["f_kod"], "Podaj kod"))
+        || (!checkStringAndFocus(form.elements["f_ulica"], "Podaj ulice"))
+        || (!checkStringAndFocus(form.elements["f_miasto"], "Podaj miasto"))
         || (!checkEmail(form.elements["f_email"]))){
         return false;
     }
