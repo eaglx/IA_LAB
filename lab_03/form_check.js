@@ -2,11 +2,19 @@ var errorField = "";
 
 function startTimer(fName) {
     errorField = fName;
-    window.setTimeout("clearError(errorField)", 5000);
+    window.setTimeout("clearError(errorField)", 2000);
 }
 
 function clearError(objName) {
     document.getElementById(objName).innerHTML = "";
+}
+
+function showElement(e) {
+    document.getElementById(e).style.visibility = 'visible';
+}
+
+function hideElement(e) {
+    document.getElementById(e).style.visibility = 'hidden';
 }
 
 function isEmpty(arg){
