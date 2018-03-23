@@ -1,3 +1,25 @@
+function nextNode(e) {
+    while (e && e.nodeType != 1) {
+        e = e.nextSibling;
+    }
+    return e;
+}
+
+function prevNode(e) {
+    while (e && e.nodeType != 1) {
+        e = e.previousSibling;
+    }
+    return e;
+}
+function swapRows(b) {
+    var tab = prevNode(b.previousSibling);
+    var tBody = nextNode(tab.firstChild);
+    var lastNode = prevNode(tBody.lastChild);
+    tBody.removeChild(lastNode);
+    var firstNode = nextNode(tBody.firstChild);
+    tBody.insertBefore(lastNode, firstNode);
+}
+
 var errorField = "";
 
 function startTimer(fName) {
