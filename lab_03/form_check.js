@@ -111,7 +111,11 @@ function validate(form){
         || (!checkStringAndFocus(form.elements["f_ulica"], "Podaj ulice"))
         || (!checkStringAndFocus(form.elements["f_miasto"], "Podaj miasto"))
         || (checkEmailRegEx(form.elements["f_email"]))){
-        return false;
+
+            for(var i in form.elements) {
+                form.elements[i].className = "wrong";
+            }
+            return false;
     }
 
     return true;

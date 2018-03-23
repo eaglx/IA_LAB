@@ -11,3 +11,7 @@
 .green {
     color: green;
 }
+
+.wrong {
+    border: 1px dashed red;
+}
