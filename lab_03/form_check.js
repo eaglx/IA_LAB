@@ -120,3 +120,19 @@ function validate(form){
 
     return true;
 }
+
+alterRows(1, document.getElementsByTagName("tr")[0])
+
+function alterRows(i, e) {
+    console.log(e);
+    if (e) {
+        if (i % 2 == 1) {
+            e.setAttribute("style", "background-color: Aqua;");
+        }
+        e = e.nextSibling;
+        while (e && e.nodeType != 1) {
+            e = e.nextSibling;
+        }
+        alterRows(++i, e);
+    }
+}
