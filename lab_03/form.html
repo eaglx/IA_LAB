@@ -23,8 +23,9 @@
                 <tr><td>Miasto</td><td><input type="text" name="f_miasto"></td></tr>
                 <tr><td>Uwagi</td><td><textarea rows="5" cols="15" name="uwagi"></textarea>
                 </td></tr>
-                <tr><td colspan="2"><input type="submit" value="Prześlij"></td></tr>
+                <tr><td colspan="2"><input type="submit" value="Prześlij" onclick="return validate(this.form);"></td></tr>
             </table>
         </form>
     </body>
+    <script src="form_check.js"></script>
 </html>
