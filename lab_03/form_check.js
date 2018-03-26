@@ -101,13 +101,14 @@ function checkEmailRegEx(obj) {
         return true;
     else {
         alert("Podaj właściwy e-mail");
+        obj.focus();
         return false;
     }
 }
 
 function checkZIPCodeRegEx(str) {
-    var postalcode = /[0-9]{2}-[0-9]/;
-    if(postalcode.test(str)) {
+    var postalcode = /[0-9]{2}-[0-9]{3}/;
+    if(postalcode.test(str) && str.length == 6) {
         document.getElementById("kod").innerHTML = " OK";
         document.getElementById("kod").className = "green";
         return false;
@@ -136,10 +137,10 @@ function checkStringAndFocus(obj, msg) {
 function validate(form){
     if((!checkStringAndFocus(form.elements["f_imie"], "Podaj imie"))
         || (!checkStringAndFocus(form.elements["f_nazwisko"], "Podaj nazwisko"))
-        || (!checkZIPCodeRegEx(form.elements["f_kod"].value))
+        || (checkZIPCodeRegEx(form.elements["f_kod"].value))
         || (!checkStringAndFocus(form.elements["f_ulica"], "Podaj ulice"))
         || (!checkStringAndFocus(form.elements["f_miasto"], "Podaj miasto"))
-        || (checkEmailRegEx(form.elements["f_email"]))){
+        || (!checkEmailRegEx(form.elements["f_email"]))){
 
             for(var i in form.elements) {
                 form.elements[i].className = "wrong";
