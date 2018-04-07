@@ -1,0 +1,26 @@
+<table>
+    <tr><td>Wlazł</td></tr>
+    <tr><td>kotek</td></tr>
+    <tr><td>na</td></tr>
+    <tr><td>...</td></tr>
+    <!--<tr><td><script>alert('!DANGER!')</script></td></tr>-->
+</table>
+
+<button>asdf</button>
+
+<script type="text/javascript">
+    function edit() {
+        var row = $(this);
+        row.html('<input id="edit" value="' + row.html() + '">');
+        $('#edit').blur(()=> {
+            row.text($(this).val());
+            row.one('click', edit);
+        }).focus();
+        $('button').trigger('asdf');
+    }
+    $(function () {
+        $('td').one('click', edit);
+        $('button').bind('asdf', function () { alert('Asdf!'); });
+        $('*').unbind();
+    });
+</script>
