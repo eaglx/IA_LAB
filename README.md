@@ -10,3 +10,5 @@ Internet Applications lab
 * lab_04 - jQuerry
 
 * lab_05 - ASP.NET
+
+* lab_06 - ASP.NET MVC
