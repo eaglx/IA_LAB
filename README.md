@@ -12,3 +12,5 @@ Internet Applications lab
 * lab_05 - ASP.NET
 
 * lab_06 - ASP.NET MVC
+
+* lab_07 - PHP
